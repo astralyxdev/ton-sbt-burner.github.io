@@ -5,7 +5,7 @@ let transfer_link = ''
 const timer = ms => new Promise(res => setTimeout(res, ms))
 
 async function checkIsSBT(address) {
-    await timer(1000)
+    await timer(10000)
     let source = await fetch(`https://api.ton.cat/v2/contracts/address/${address}/source`)
     source = await source.json()
 

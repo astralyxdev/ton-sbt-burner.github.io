@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burn SBT NFT | Astralyx</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="app">
+        <img src="./img/logo.svg" class="logo">
+        <div class="title">
+            Tool for burn <span>SoulBound NFT</span>
+        </div>
+        <div class="step1">
+            <div class="input">
+                <input placeholder="Enter your TON address" id="address" />
+                <div class="button" id="step1">
+                    Next step
+                </div>
+            </div>
+        </div>
+        <div class="step2" style="display: none;">
+            <div class="nfts"></div>
+        </div>
+        <div class="step3" style="display: none;">
+            <div class="qrcode">
+                <img class="qr">
+            </div>
+            <div class="button" id="openWallet">
+                Open wallet
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/tonweb.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereumjs/browser-builds/dist/ethereumjs-tx/ethereumjs-tx-1.3.3.min.js">
+    </script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

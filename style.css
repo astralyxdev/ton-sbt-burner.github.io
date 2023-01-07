@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0E0F16;
+    color: #fff;
+}
+
+.app {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.app .title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.app .title span {
+    color: #61AAF5;
+}
+
+.app .description {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.app .description span {
+    font-weight: 500;
+}
+
+.app .input {
+    display: flex;
+}
+
+.app input {
+    background: #15161C;
+    padding: 20px 22.5px;
+    color: #fff;
+    border: none;
+    outline: none;
+    margin-bottom: 12px;
+    width: 304px;
+}
+
+.app .button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    overflow: hidden;
+    isolation: isolate;
+    position: relative;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #0E0F16;
+    white-space: nowrap;
+    background: url(./img/blue-gradient.jpg), #61AAF5;
+    background-position: center;
+    background-size: cover;
+    padding: 0px 40px;
+    height: 56px;
+    cursor: pointer;
+}
+
+.app .button:before {
+    content: "";
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    background: #ffffff;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    top: -43px;
+    right: -43px;
+}
+
+.app .button:after {
+    content: "";
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    background: #0E0F16;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    top: -43px;
+    right: -43px;
+}
+
+.app .nfts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding: 24px 120px;
+    grid-row-gap: 24px;
+    grid-column-gap: 24px;
+    max-height: 500px;
+    overflow: auto;
+}
+
+.app .nfts::-webkit-scrollbar {
+    width: 0;
+}
+
+.app .nfts .item img {
+    max-width: 100%;
+    margin-bottom: 24px;
+}
+
+.app .nfts .nameBlock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.app .nfts .name {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}
+
+.app .nfts .button {
+    padding: 0px 40px;
+    gap: 12px;
+
+    width: 131px;
+    height: 42px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #0E0F16;
+
+}
+
+.app .qrcode {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.app .step3 .button {
+    width: 100%;
+}

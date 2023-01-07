@@ -5,11 +5,10 @@ let transfer_link = ''
 const timer = ms => new Promise(res => setTimeout(res, ms))
 
 async function checkIsSBT(address) {
-    await timer(10000)
-    let source = await fetch(`https://api.ton.cat/v2/contracts/address/${address}/source`)
+    let source = await fetch(`https://scalable-api.tonwhales.com/getAddressInformation?address=${address}`)
     source = await source.json()
 
-    return source.code.base64 == SBT_ITEM_CODE
+    return source.result.code == SBT_ITEM_CODE
 }
 
 window.onload = () => {

@@ -33,14 +33,18 @@ window.onload = () => {
             let sbt = []
 
             for (let i in nfts.nft_items) {
-                let item = nfts.nft_items[i]
+                try {
+                    let item = nfts.nft_items[i]
 
-                let isSBT = await checkIsSBT(item.address)
-                if (isSBT) {
-                    item.metadata.name = `${item.metadata.name.slice(0, 8)}`
-                    sbt.push(item)
+                    let isSBT = await checkIsSBT(item.address)
+                    if (isSBT) {
+                        item.metadata.name = `${item.metadata.name.slice(0, 8)}`
+                        sbt.push(item)
+                    }
+                    document.querySelector('.title').innerHTML = `Getting your NFTs... <span>${Number(i) + 1}/${nfts.nft_items.length}</span>`
+                } catch(e) {
+                    continue
                 }
-                document.querySelector('.title').innerHTML = `Getting your NFTs... <span>${Number(i) + 1}/${nfts.nft_items.length}</span>`
             }
 
             if (sbt.length < 1) {
